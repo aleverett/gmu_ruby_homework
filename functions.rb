@@ -7,7 +7,22 @@ end
 # Letters should be lowercase before counting
 # For example, histogram('Hello') returns {'h'=>1,'e'=>1,'l'=>2,'o'=>1}
 def histogram(a_string)
-  # TODO write your code here
+  @results = {}
+  @current_index=0
+  while @current_index <= a_string.length-1
+    @current_letter=a_string[@current_index].downcase
+    if @current_letter =~ /[a-z]/
+      if @results[@current_letter]
+        @results[@current_letter]+=1
+      else
+        @results[@current_letter]=1
+      end
+    end
+    @current_index+=1
+  end
+  #return !results['a']
+  #return a_string[18]
+  return @results
 end
 
 # Sum all the numbers in the array
