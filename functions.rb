@@ -29,7 +29,8 @@ end
 # (Hint: the is_a? method might be useful here)
 def sum_only_numbers(an_array)
   @sum = 0
-  for item in an_array
+  an_array.each do
+    |item|
     if item.is_a? Numeric
       @sum+=item
     end
@@ -67,4 +68,4 @@ end
 # puts reverse([3,6,'dog']).inspect
 # puts histogram('The Quick brown fox').inspect
 # puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
- puts fizzbuzz.join("\n")
+# puts fizzbuzz.join("\n")
