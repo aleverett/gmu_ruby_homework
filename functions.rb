@@ -49,13 +49,13 @@ def fizzbuzz
   @index = 1
   while @index <= 100 do
     if @index % 3 == 0 && @index % 5 == 0
-      @return_array[@index-1]='FizzBuzz'
+      @return_array << 'FizzBuzz'
     elsif @index % 3 == 0
-      @return_array[@index-1]='Fizz'
+      @return_array << 'Fizz'
     elsif @index % 5 == 0
-      @return_array[@index-1]='Buzz'
+      @return_array << 'Buzz'
     else
-      @return_array[@index-1]=@index
+      @return_array << @index
     end
     @index+=1
   end
@@ -67,4 +67,4 @@ end
 # puts reverse([3,6,'dog']).inspect
 # puts histogram('The Quick brown fox').inspect
 # puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
-# puts fizzbuzz.join("\n")
+ puts fizzbuzz.join("\n")
