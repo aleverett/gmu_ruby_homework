@@ -30,7 +30,13 @@ end
 # Be sure to only sum the numbers
 # (Hint: the is_a? method might be useful here)
 def sum_only_numbers(an_array)
-  #TODO write your code here
+  @sum = 0
+  for item in an_array
+    if item.is_a? Numeric
+      @sum+=item
+    end
+  end
+  return @sum
 end
 
 # For i from 1 to 100, return an array.
@@ -47,6 +53,6 @@ end
 # Uncomment a line to test the function your are developing
 # Type "ruby functions.rb" at the command line (Konsole) to run the script
 # puts reverse([3,6,'dog']).inspect
- puts histogram('The Quick brown fox').inspect
-# puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
+# puts histogram('The Quick brown fox').inspect
+ puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
 # puts fizzbuzz.join("\n")
