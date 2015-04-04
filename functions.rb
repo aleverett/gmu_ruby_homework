@@ -20,8 +20,6 @@ def histogram(a_string)
     end
     @current_index+=1
   end
-  #return !results['a']
-  #return a_string[18]
   return @results
 end
 
@@ -47,12 +45,26 @@ end
 # Otherwise, the element is simply the value of i
 # For example [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', ..., 14, 'FizzBuzz', ...]
 def fizzbuzz
-  #TODO write your code here
+  @return_array = []
+  @index = 1
+  while @index <= 100 do
+    if @index % 3 == 0 && @index % 5 == 0
+      @return_array[@index-1]='FizzBuzz'
+    elsif @index % 3 == 0
+      @return_array[@index-1]='Fizz'
+    elsif @index % 5 == 0
+      @return_array[@index-1]='Buzz'
+    else
+      @return_array[@index-1]=@index
+    end
+    @index+=1
+  end
+  return @return_array
 end
 
 # Uncomment a line to test the function your are developing
 # Type "ruby functions.rb" at the command line (Konsole) to run the script
 # puts reverse([3,6,'dog']).inspect
 # puts histogram('The Quick brown fox').inspect
- puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
+# puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
 # puts fizzbuzz.join("\n")
